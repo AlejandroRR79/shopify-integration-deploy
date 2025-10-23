@@ -1,9 +1,9 @@
 FROM eclipse-temurin:17-jdk
 WORKDIR /app
 
-# Copia el nuevo .jar y el archivo de configuración
+# Copia el .jar y el archivo de configuración
 COPY shopify-integration-erp-0.1-SNAPSHOT.jar app.jar
-COPY environment.prod.properties application-prod.properties
+COPY application-prod.properties application-prod.properties
 
 # Paso de depuración: muestra el contenido del directorio /app
 RUN ls -l /app
